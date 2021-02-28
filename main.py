@@ -1,3 +1,5 @@
+import random
+
 def display_board(board):
     print(board[7] + '|' + board[8] + '|' + board[9])
     print(board[4] + '|' + board[5] + '|' + board[6])
@@ -40,3 +42,14 @@ def win_check(board, mark):
         # Win \
         (board[7] == board[5] == board[3] == mark)
         )
+
+
+def choose_first_palayer():
+
+    flip = random.randint(0,1)
+
+    if flip == 0:
+        return 'Player 1'
+    else:
+        return 'Player 2'
+
