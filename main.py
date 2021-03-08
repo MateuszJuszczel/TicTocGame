@@ -78,7 +78,7 @@ def player_choice(board):
 
 def replay():
 
-    input('Play again? Enter Yes or No ')
+    choice = input('Play again? Enter Yes or No ')
 
     return choice == 'Yes'
 
@@ -130,7 +130,7 @@ while True:
         else:
             # Show the board
             display_board(the_board)
-            # Chooose a position
+            # Choose a position
             position = player_choice(the_board)
             # Place the marker on the position
             place_marker(the_board, player2_marker, position)
@@ -149,3 +149,5 @@ while True:
                 else:
                     turn = 'Player 1'
 
+    if not replay():
+        break
