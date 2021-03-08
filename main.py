@@ -55,3 +55,13 @@ def choose_first_palayer():
 def space_check(board, position):
     # Return boolean if in board is empty space
     return board[position] == ' '
+
+
+def full_board_check(board):
+
+    for i in range(1,10):
+        if space_check(board, i):
+            return False
+    # Board is full is we return True
+    return True
+
